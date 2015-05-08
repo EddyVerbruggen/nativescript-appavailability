@@ -1,0 +1,27 @@
+{
+  "name": "nativescript-appavailability",
+  "version": "1.0.0",
+  "description": "A module to check for availability of other apps in your NativeScript app",
+  "main": "appavailability.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eddyverbruggen/nativescript-appavailability.git"
+  },
+  "keywords": [
+    "NativeScript"
+  ],
+  "author": {
+    "name": "Eddy Verbruggen",
+    "email": "eddyverbruggen@gmail.com",
+    "url": "http://x-services.nl/"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/eddyverbruggen/nativescript-appavailability/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/eddyverbruggen/nativescript-appavailability/issues"
+  },
+  "homepage": "https://github.com/eddyverbruggen/nativescript-appavailability",
+  "readmeFilename": "README.md"
+}
