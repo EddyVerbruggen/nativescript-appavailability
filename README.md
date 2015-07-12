@@ -1,26 +1,30 @@
 # NativeScript AppAvailability
 
-A module to check for availability of other apps in your NativeScript app.
+A plugin to check for availability of other apps on the device.
 
 ## Installation
-From the command prompt go to your app's `app` folder and execute:
+Run the following command from the root of your project:
 
 ```
-npm install nativescript-appavailability
+tns plugin add nativescript-appavailability
 ```
 
 ## Usage
 
+To use this plugin you must first require() it:
+
+```js
+var appavailability = require("nativescript-appavailability");
+```
+
 ### available
 
 ```js
-  var appAvailability = require( "./node_modules/nativescript-appavailability/appavailability" );
-
   // examples of what to pass:
   // - for iOS: maps://
   // - for Android: com.facebook.katana
   appAvailability.available("com.facebook.katana").then(function(avail) {
-      alert("Avail? " + avail);
+      alert("App available? " + avail);
   })
 ```
 
