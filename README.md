@@ -23,8 +23,8 @@ var appavailability = require("nativescript-appavailability");
   // examples of what to pass:
   // - for iOS: maps://
   // - for Android: com.facebook.katana
-  appAvailability.available("com.facebook.katana").then(function(avail) {
-      alert("App available? " + avail);
+  appavailability.available("com.facebook.katana").then(function(avail) {
+      console.log("App available? " + avail);
   })
 ```
 

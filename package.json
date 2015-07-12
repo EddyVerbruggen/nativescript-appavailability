@@ -1,6 +1,6 @@
 {
   "name": "nativescript-appavailability",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A NativeScript plugin to check for availability of other apps on the device.",
   "main": "appavailability.js",
   "nativescript": {
