@@ -21,11 +21,26 @@ var appavailability = require("nativescript-appavailability");
 
 ```js
   // examples of what to pass:
-  // - for iOS: maps://
-  // - for Android: com.facebook.katana
+  // - for iOS: "maps://", "twitter://", "fb://"
+  // - for Android: "com.facebook.katana"
   appavailability.available("com.facebook.katana").then(function(avail) {
       console.log("App available? " + avail);
   })
+```
+
+#### iOS 9+ whitelisting
+To get useful results on iOS 9 and up you need to whitelist the URL Scheme
+you're querying in the application's `.plist`.
+
+Luckily NativeScript made this pretty easy. Just open `app/App_ResourcesiOS/Info.plist`
+and add this if you want to query for both `twitter://` and `fb://`:
+
+```xml
+  <key>LSApplicationQueriesSchemes</key>
+  <array>
+    <string>fb</string>
+    <string>twitter</string>
+  </array>
 ```
 
 You may wonder how one would determine the correct identifier for an app.
