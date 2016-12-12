@@ -2,7 +2,7 @@
   "name": "nativescript-appavailability",
   "version": "1.2.0",
   "description": "A NativeScript plugin to check for availability of other apps on the device.",
-  "main": "appavailability.js",
+  "main": "appavailability",
   "nativescript": {
     "platforms": {
       "ios": "2.3.0",
