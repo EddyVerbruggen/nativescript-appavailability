@@ -36,7 +36,7 @@ appAvailability.available("com.facebook.katana").then(function(avail) {
 })
 ```
 
-#### iOS 9+ whitelisting
+## iOS whitelisting
 To get useful results on iOS 9 and up you need to whitelist the URL Scheme
 you're querying in the application's `.plist`.
 
