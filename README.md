@@ -11,21 +11,29 @@ tns plugin add nativescript-appavailability
 
 ## Usage
 
-To use this plugin you must first require() it:
-
+### TypeScript
 ```js
-var appavailability = require("nativescript-appavailability");
+const isAppAvailable = require("nativescript-appavailability").available;
+
+// examples of what to pass:
+// - for iOS: "maps://", "twitter://", "fb://"
+// - for Android: "com.facebook.katana"
+appavailability.available("twitter://").then((avail: boolean) => {
+  console.log("App available? " + avail);
+})
 ```
 
-### available
+### JavaScript
 
 ```js
-  // examples of what to pass:
-  // - for iOS: "maps://", "twitter://", "fb://"
-  // - for Android: "com.facebook.katana"
-  appavailability.available("com.facebook.katana").then(function(avail) {
-      console.log("App available? " + avail);
-  })
+var appAvailability = require("nativescript-appavailability");
+
+// examples of what to pass:
+// - for iOS: "maps://", "twitter://", "fb://"
+// - for Android: "com.facebook.katana"
+appAvailability.available("com.facebook.katana").then(function(avail) {
+  console.log("App available? " + avail);
+})
 ```
 
 #### iOS 9+ whitelisting
