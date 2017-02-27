@@ -23,6 +23,18 @@ appavailability.available("twitter://").then((avail: boolean) => {
 })
 ```
 
+### TypeScript + Angular
+```js
+import * as appavailability from "nativescript-appavailability";
+
+// examples of what to pass:
+// - for iOS: "maps://", "twitter://", "fb://"
+// - for Android: "com.facebook.katana"
+appavailability.available("twitter://").then((avail: boolean) => {
+  console.log("App available? " + avail);
+})
+```
+
 ### JavaScript
 
 ```js
