@@ -1,5 +1,15 @@
 # NativeScript AppAvailability
 
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][npm-url]
+[![Twitter Follow][twitter-image]][twitter-url]
+
+[npm-image]:http://img.shields.io/npm/v/nativescript-appavailability.svg
+[npm-url]:https://npmjs.org/package/nativescript-appavailability
+[downloads-image]:http://img.shields.io/npm/dm/nativescript-appavailability.svg
+[twitter-image]:https://img.shields.io/twitter/follow/eddyverbruggen.svg?style=social&label=Follow%20me
+[twitter-url]:https://twitter.com/eddyverbruggen
+
 A plugin to check for availability of other apps on the device.
 
 ## Installation
