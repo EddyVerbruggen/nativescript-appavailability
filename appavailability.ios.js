@@ -13,3 +13,14 @@ exports.available = function (scheme) {
     }
   });
 };
+
+exports.availableSync = function (scheme) {
+  try {
+    var url = NSURL.URLWithString(scheme);
+    var app = utils.ios.getter(UIApplication, UIApplication.sharedApplication);
+    return app.canOpenURL(url);
+  } catch (ex) {
+    console.log("Error in appavailability.availableSync: " + ex);
+    return false;
+  }
+};

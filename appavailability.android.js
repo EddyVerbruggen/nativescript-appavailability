@@ -16,3 +16,18 @@ exports.available = function (uri) {
     }
   });
 };
+
+exports.availableSync = function (uri) {
+  try {
+    try {
+      var pm = com.tns.NativeScriptApplication.getInstance().getPackageManager();
+      pm.getPackageInfo(uri, android.content.pm.PackageManager.GET_ACTIVITIES);
+      return true;
+    } catch(e) {
+      return false;
+    }
+  } catch (ex) {
+    console.log("Error in appavailability.availableSync: " + ex);
+    return false;
+  }
+};
