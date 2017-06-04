@@ -1,14 +1,17 @@
 {
   "name": "nativescript-appavailability",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "A NativeScript plugin to check for availability of other apps on the device.",
   "main": "appavailability",
-  "typings": "appavailability.d.ts",
+  "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
       "ios": "2.3.0",
       "android": "2.3.0"
     }
+  },
+  "scripts": {
+    "test": "echo 'TODO implement tests :)'"
   },
   "repository": {
     "type": "git",
