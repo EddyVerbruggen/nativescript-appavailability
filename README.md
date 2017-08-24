@@ -65,6 +65,9 @@ Now that you know whether an app is installed or not, you probably want to launc
 Here's a snippet that opens the mobile Twitter app and falls back to the website if it's not installed.
 
 ```typescript
+import { available } from "nativescript-appavailability";
+import { openUrl } from "tns-core-modules/utils/utils";
+
 const twitterScheme = "twitter://";
 available(twitterScheme).then(available => {
   if (available) {
