@@ -36,7 +36,7 @@ appavailability.available("twitter://").then((avail: boolean) => {
 ```
 
 ### TypeScript + Angular
-```js
+```typescript
 import * as appavailability from "nativescript-appavailability";
 
 // examples of what to pass:
@@ -59,6 +59,24 @@ appAvailability.available("com.facebook.katana").then(function(avail) {
   console.log("App available? " + avail);
 })
 ```
+
+## Opening an app (with web fallback)
+Now that you know whether an app is installed or not, you probably want to launch it.
+Here's a snippet that opens the mobile Twitter app and falls back to the website if it's not installed.
+
+```typescript
+const twitterScheme = "twitter://";
+available(twitterScheme).then(available => {
+  if (available) {
+    // open in the app
+    openUrl(twitterScheme + (isIOS ? "/user?screen_name=" : "user?user_id=") + "eddyverbruggen");
+  } else {
+    // open in the default browser
+    openUrl("https://twitter.com/eddyverbruggen");
+  }
+})
+```
+
 
 ## iOS whitelisting
 To get useful results on iOS 9 and up you need to whitelist the URL Scheme
