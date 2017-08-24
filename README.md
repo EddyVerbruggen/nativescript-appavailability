@@ -80,6 +80,18 @@ available(twitterScheme).then(available => {
 })
 ```
 
+And a more concise, synchronous way would be:
+
+```typescript
+import { availableSync } from "nativescript-appavailability";
+import { openUrl } from "tns-core-modules/utils/utils";
+
+if (availableSync("twitter://")) {
+  openUrl("twitter://" + (isIOS ? "/user?screen_name=" : "user?user_id=") + "eddyverbruggen");
+} else {
+  openUrl("https://twitter.com/eddyverbruggen");
+}
+```
 
 ## iOS whitelisting
 To get useful results on iOS 9 and up you need to whitelist the URL Scheme
