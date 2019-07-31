@@ -1,11 +1,8 @@
-var utils = require("utils/utils");
-
 exports.available = function (scheme) {
   return new Promise(function (resolve, reject) {
     try {
       var url = NSURL.URLWithString(scheme);
-      var app = UIApplication.sharedApplication;
-      var avail = app.canOpenURL(url);
+      var avail = UIApplication.sharedApplication.canOpenURL(url);
       resolve(avail);
     } catch (ex) {
       console.log("Error in appavailability.available: " + ex);
@@ -17,8 +14,7 @@ exports.available = function (scheme) {
 exports.availableSync = function (scheme) {
   try {
     var url = NSURL.URLWithString(scheme);
-    var app = UIApplication.sharedApplication;
-    return app.canOpenURL(url);
+    return UIApplication.sharedApplication.canOpenURL(url);
   } catch (ex) {
     console.log("Error in appavailability.availableSync: " + ex);
     return false;
