@@ -1,5 +1,3 @@
-var application = require("application");
-
 exports.available = function (uri) {
   return new Promise(function (resolve, reject) {
     try {
