@@ -12,6 +12,8 @@
 
 A plugin to check for availability of other apps on the device.
 
+> ⚠️ Looking for NativeScript 7 compatibilty? Go to [the NativeScript/plugins repo](https://github.com/NativeScript/plugins/tree/master/packages/appavailability).
+
 ## Installation
 Run the following command from the root of your project:
 
